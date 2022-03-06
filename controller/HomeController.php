@@ -7,7 +7,7 @@ class HomeController
     public function indexAction()
     {
         if (isset($_GET['logout'])) {
-            unset($_SESSION['userLogInStatus']);
+            session_destroy();
         }
         if (isset($_POST['LoginSubmit'])) {
             $username = $_POST['username'];
